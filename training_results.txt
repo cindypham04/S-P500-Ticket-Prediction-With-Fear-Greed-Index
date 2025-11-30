@@ -1,0 +1,463 @@
+============================================================
+PROCESSING FOLD 1/5
+============================================================
+  Loading fold 1 data...
+    Reading training file: ./sequential_splits_v1/fold_1_train.csv
+    Reading validation file: ./sequential_splits_v1/fold_1_validation.csv
+    Training data loaded: (146813, 121)
+    Validation data loaded: (149153, 121)
+
+Fold 1 - Training and Evaluation
+----------------------------------------
+  Preparing training data...
+    Preparing features and target...
+    Found 112 feature columns
+    Data shape before processing: (146813, 121)
+    Features matrix shape: (146813, 112)
+    Target vector shape: (146813,)
+    Target distribution: [69368 77445]
+  Preparing validation data...
+    Preparing features and target...
+    Found 112 feature columns
+    Data shape before processing: (149153, 121)
+    Features matrix shape: (149153, 112)
+    Target vector shape: (149153,)
+    Target distribution: [69556 79597]
+  Training samples: 146,813
+  Validation samples: 149,153
+  Features: 112
+  Cleaning data (handling NaN/inf values)...
+  Data cleaning completed
+  Scaling features for Logistic Regression...
+  Feature scaling completed
+
+  Training Logistic Regression...
+    Fitting Logistic Regression on scaled data...
+    Making predictions on validation set...
+    Calculating metrics...
+    Accuracy: 0.4849
+    Precision: 0.5666
+    Recall: 0.1481
+    F1-Score: 0.2348
+    AUC: 0.4987
+    Logistic Regression training completed!
+
+  Training Random Forest...
+    Fitting Random Forest on original data...
+    Making predictions on validation set...
+    Calculating metrics...
+    Accuracy: 0.5019
+    Precision: 0.5570
+    Recall: 0.3256
+    F1-Score: 0.4110
+    AUC: 0.5218
+    Random Forest training completed!
+
+  Training Gradient Boosted Trees...
+    Fitting Gradient Boosted Trees on original data...
+    Making predictions on validation set...
+    Calculating metrics...
+    Accuracy: 0.4945
+    Precision: 0.5703
+    Recall: 0.2142
+    F1-Score: 0.3114
+    AUC: 0.5203
+    Gradient Boosted Trees training completed!
+
+  Storing results for fold 1...
+  Fold 1 completed successfully!
+
+============================================================
+PROCESSING FOLD 2/5
+============================================================
+  Loading fold 2 data...
+    Reading training file: ./sequential_splits_v1/fold_2_train.csv
+    Reading validation file: ./sequential_splits_v1/fold_2_validation.csv
+    Training data loaded: (295966, 121)
+    Validation data loaded: (150740, 121)
+
+Fold 2 - Training and Evaluation
+----------------------------------------
+  Preparing training data...
+    Preparing features and target...
+    Found 112 feature columns
+    Data shape before processing: (295966, 121)
+    Features matrix shape: (295966, 112)
+    Target vector shape: (295966,)
+    Target distribution: [138924 157042]
+  Preparing validation data...
+    Preparing features and target...
+    Found 112 feature columns
+    Data shape before processing: (150740, 121)
+    Features matrix shape: (150740, 112)
+    Target vector shape: (150740,)
+    Target distribution: [70875 79865]
+  Training samples: 295,966
+  Validation samples: 150,740
+  Features: 112
+  Cleaning data (handling NaN/inf values)...
+  Data cleaning completed
+  Scaling features for Logistic Regression...
+  Feature scaling completed
+
+  Training Logistic Regression...
+    Fitting Logistic Regression on scaled data...
+    Making predictions on validation set...
+    Calculating metrics...
+    Accuracy: 0.4824
+    Precision: 0.5448
+    Recall: 0.1405
+    F1-Score: 0.2234
+    AUC: 0.5117
+    Logistic Regression training completed!
+
+  Training Random Forest...
+    Fitting Random Forest on original data...
+    Making predictions on validation set...
+    Calculating metrics...
+    Accuracy: 0.4855
+    Precision: 0.5418
+    Recall: 0.1877
+    F1-Score: 0.2788
+    AUC: 0.5010
+    Random Forest training completed!
+
+  Training Gradient Boosted Trees...
+    Fitting Gradient Boosted Trees on original data...
+    Making predictions on validation set...
+    Calculating metrics...
+    Accuracy: 0.4905
+    Precision: 0.5659
+    Recall: 0.1646
+    F1-Score: 0.2550
+    AUC: 0.5093
+    Gradient Boosted Trees training completed!
+
+  Storing results for fold 2...
+  Fold 2 completed successfully!
+
+============================================================
+PROCESSING FOLD 3/5
+============================================================
+  Loading fold 3 data...
+    Reading training file: ./sequential_splits_v1/fold_3_train.csv
+    Reading validation file: ./sequential_splits_v1/fold_3_validation.csv
+    Training data loaded: (446706, 121)
+    Validation data loaded: (151670, 121)
+
+Fold 3 - Training and Evaluation
+----------------------------------------
+  Preparing training data...
+    Preparing features and target...
+    Found 112 feature columns
+    Data shape before processing: (446706, 121)
+    Features matrix shape: (446706, 112)
+    Target vector shape: (446706,)
+    Target distribution: [209799 236907]
+  Preparing validation data...
+    Preparing features and target...
+    Found 112 feature columns
+    Data shape before processing: (151670, 121)
+    Features matrix shape: (151670, 112)
+    Target vector shape: (151670,)
+    Target distribution: [75674 75996]
+  Training samples: 446,706
+  Validation samples: 151,670
+  Features: 112
+  Cleaning data (handling NaN/inf values)...
+  Data cleaning completed
+  Scaling features for Logistic Regression...
+  Feature scaling completed
+
+  Training Logistic Regression...
+    Fitting Logistic Regression on scaled data...
+    Making predictions on validation set...
+    Calculating metrics...
+    Accuracy: 0.5342
+    Precision: 0.5314
+    Recall: 0.5966
+    F1-Score: 0.5621
+    AUC: 0.5353
+    Logistic Regression training completed!
+
+  Training Random Forest...
+    Fitting Random Forest on original data...
+    Making predictions on validation set...
+    Calculating metrics...
+    Accuracy: 0.5106
+    Precision: 0.5075
+    Recall: 0.7852
+    F1-Score: 0.6165
+    AUC: 0.5200
+    Random Forest training completed!
+
+  Training Gradient Boosted Trees...
+    Fitting Gradient Boosted Trees on original data...
+    Making predictions on validation set...
+    Calculating metrics...
+    Accuracy: 0.5160
+    Precision: 0.5188
+    Recall: 0.4694
+    F1-Score: 0.4929
+    AUC: 0.5209
+    Gradient Boosted Trees training completed!
+
+  Storing results for fold 3...
+  Fold 3 completed successfully!
+
+============================================================
+PROCESSING FOLD 4/5
+============================================================
+  Loading fold 4 data...
+    Reading training file: ./sequential_splits_v1/fold_4_train.csv
+    Reading validation file: ./sequential_splits_v1/fold_4_validation.csv
+    Training data loaded: (598376, 121)
+    Validation data loaded: (152313, 121)
+
+Fold 4 - Training and Evaluation
+----------------------------------------
+  Preparing training data...
+    Preparing features and target...
+    Found 112 feature columns
+    Data shape before processing: (598376, 121)
+    Features matrix shape: (598376, 112)
+    Target vector shape: (598376,)
+    Target distribution: [285473 312903]
+  Preparing validation data...
+    Preparing features and target...
+    Found 112 feature columns
+    Data shape before processing: (152313, 121)
+    Features matrix shape: (152313, 112)
+    Target vector shape: (152313,)
+    Target distribution: [73217 79096]
+  Training samples: 598,376
+  Validation samples: 152,313
+  Features: 112
+  Cleaning data (handling NaN/inf values)...
+  Data cleaning completed
+  Scaling features for Logistic Regression...
+  Feature scaling completed
+
+  Training Logistic Regression...
+    Fitting Logistic Regression on scaled data...
+    Making predictions on validation set...
+    Calculating metrics...
+    Accuracy: 0.4874
+    Precision: 0.5140
+    Recall: 0.2368
+    F1-Score: 0.3242
+    AUC: 0.4987
+    Logistic Regression training completed!
+
+  Training Random Forest...
+    Fitting Random Forest on original data...
+    Making predictions on validation set...
+    Calculating metrics...
+    Accuracy: 0.4965
+    Precision: 0.5531
+    Recall: 0.1589
+    F1-Score: 0.2469
+    AUC: 0.5138
+    Random Forest training completed!
+
+  Training Gradient Boosted Trees...
+    Fitting Gradient Boosted Trees on original data...
+    Making predictions on validation set...
+    Calculating metrics...
+    Accuracy: 0.4900
+    Precision: 0.5426
+    Recall: 0.1144
+    F1-Score: 0.1890
+    AUC: 0.5027
+    Gradient Boosted Trees training completed!
+
+  Storing results for fold 4...
+  Fold 4 completed successfully!
+
+============================================================
+PROCESSING FOLD 5/5
+============================================================
+  Loading fold 5 data...
+    Reading training file: ./sequential_splits_v1/fold_5_train.csv
+    Reading validation file: ./sequential_splits_v1/fold_5_validation.csv
+    Training data loaded: (750689, 121)
+    Validation data loaded: (153222, 121)
+
+Fold 5 - Training and Evaluation
+----------------------------------------
+  Preparing training data...
+    Preparing features and target...
+    Found 112 feature columns
+    Data shape before processing: (750689, 121)
+    Features matrix shape: (750689, 112)
+    Target vector shape: (750689,)
+    Target distribution: [358690 391999]
+  Preparing validation data...
+    Preparing features and target...
+    Found 112 feature columns
+    Data shape before processing: (153222, 121)
+    Features matrix shape: (153222, 112)
+    Target vector shape: (153222,)
+    Target distribution: [72664 80558]
+  Training samples: 750,689
+  Validation samples: 153,222
+  Features: 112
+  Cleaning data (handling NaN/inf values)...
+  Data cleaning completed
+  Scaling features for Logistic Regression...
+  Feature scaling completed
+
+  Training Logistic Regression...
+    Fitting Logistic Regression on scaled data...
+    Making predictions on validation set...
+    Calculating metrics...
+    Accuracy: 0.5041
+    Precision: 0.5595
+    Recall: 0.2670
+    F1-Score: 0.3615
+    AUC: 0.5247
+    Logistic Regression training completed!
+
+  Training Random Forest...
+    Fitting Random Forest on original data...
+    Making predictions on validation set...
+    Calculating metrics...
+    Accuracy: 0.4753
+    Precision: 0.5096
+    Recall: 0.0525
+    F1-Score: 0.0952
+    AUC: 0.4972
+    Random Forest training completed!
+
+  Training Gradient Boosted Trees...
+    Fitting Gradient Boosted Trees on original data...
+    Making predictions on validation set...
+    Calculating metrics...
+    Accuracy: 0.4862
+    Precision: 0.5240
+    Recall: 0.2471
+    F1-Score: 0.3358
+    AUC: 0.4925
+    Gradient Boosted Trees training completed!
+
+  Storing results for fold 5...
+  Fold 5 completed successfully!
+
+============================================================
+SEQUENTIAL VALIDATION COMPLETED
+============================================================
+
+============================================================
+FINAL TEST SET EVALUATION
+============================================================
+Loading test data from: ./sequential_splits_v1/final_test.csv
+Test data loaded: (191263, 121)
+    Preparing features and target...
+    Found 112 feature columns
+    Data shape before processing: (191263, 121)
+    Features matrix shape: (191263, 112)
+    Target vector shape: (191263,)
+    Target distribution: [ 91251 100012]
+Test samples: 191,263
+
+Loading final training data (fold 5)...
+  Loading fold 5 data...
+    Reading training file: ./sequential_splits_v1/fold_5_train.csv
+    Reading validation file: ./sequential_splits_v1/fold_5_validation.csv
+    Training data loaded: (750689, 121)
+    Validation data loaded: (153222, 121)
+    Preparing features and target...
+    Found 112 feature columns
+    Data shape before processing: (750689, 121)
+    Features matrix shape: (750689, 112)
+    Target vector shape: (750689,)
+    Target distribution: [358690 391999]
+Scaling features for final models...
+Feature scaling completed
+
+Training final Logistic Regression on all training data...
+  Fitting Logistic Regression on scaled data...
+  Making predictions on test set...
+  Calculating test metrics...
+  Test Accuracy: 0.5070
+  Test Precision: 0.5572
+  Test Recall: 0.2786
+  Test F1-Score: 0.3715
+  Test AUC: 0.5263
+  Logistic Regression test evaluation completed!
+
+Training final Random Forest on all training data...
+  Fitting Random Forest on original data...
+  Making predictions on test set...
+  Calculating test metrics...
+  Test Accuracy: 0.4784
+  Test Precision: 0.5135
+  Test Recall: 0.0490
+  Test F1-Score: 0.0895
+  Test AUC: 0.5003
+  Random Forest test evaluation completed!
+
+Training final Gradient Boosted Trees on all training data...
+  Fitting Gradient Boosted Trees on original data...
+  Making predictions on test set...
+  Calculating test metrics...
+  Test Accuracy: 0.4884
+  Test Precision: 0.5238
+  Test Recall: 0.2377
+  Test F1-Score: 0.3270
+  Test AUC: 0.4904
+  Gradient Boosted Trees test evaluation completed!
+
+Sequential Validation Summary
+==================================================
+
+KEY METRICS SUMMARY:
+------------------------------
+Model                     Avg Val AUC   Test AUC  
+--------------------------------------------------
+Logistic Regression       0.5138        0.5263    
+Random Forest             0.5108        0.5003    
+Gradient Boosted Trees    0.5092        0.4904    
+
+Logistic Regression:
+-------------------
+   Validation Accuracy:  0.4986 ± 0.0194
+   Validation Precision: 0.5432 ± 0.0190
+   Validation Recall:    0.2778 ± 0.1668
+   Validation F1-Score:  0.3412 ± 0.1222
+   Validation AUC:       0.5138 ± 0.0144
+   Test Accuracy:       0.5070
+   Test Precision:      0.5572
+   Test Recall:         0.2786
+   Test F1-Score:       0.3715
+   Test AUC:            0.5263
+
+Random Forest:
+-------------
+   Validation Accuracy:  0.4940 ± 0.0124
+   Validation Precision: 0.5338 ± 0.0212
+   Validation Recall:    0.3020 ± 0.2568
+   Validation F1-Score:  0.3297 ± 0.1751
+   Validation AUC:       0.5108 ± 0.0100
+   Test Accuracy:       0.4784
+   Test Precision:      0.5135
+   Test Recall:         0.0490
+   Test F1-Score:       0.0895
+   Test AUC:            0.5003
+
+Gradient Boosted Trees:
+----------------------
+   Validation Accuracy:  0.4954 ± 0.0106
+   Validation Precision: 0.5443 ± 0.0210
+   Validation Recall:    0.2419 ± 0.1223
+   Validation F1-Score:  0.3168 ± 0.1015
+   Validation AUC:       0.5092 ± 0.0108
+   Test Accuracy:       0.4884
+   Test Precision:      0.5238
+   Test Recall:         0.2377
+   Test F1-Score:       0.3270
+   Test AUC:            0.4904
+
+Sequential validation completed
+Results show performance across multiple time periods
+Test results represent final out-of-sample performance
