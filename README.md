@@ -16,48 +16,6 @@ This project implements a comprehensive machine learning pipeline for predicting
 - **Detailed Evaluation**: Comprehensive plots comparing all models across all metrics
 - **Model Persistence**: All trained models saved for future use
 
-## Project Structure
-
-```
-milestone_2/
-├── dataset_creation/                    # Data preprocessing and feature engineering
-│   ├── download_sp500_data.py          # Downloads S&P 500 stock data from yfinance
-│   ├── create_technical_features.py    # Technical indicators calculation
-│   ├── add_lag_features.py             # Lag features (returns from past N days)
-│   ├── add_international_indices.py    # International market indices
-│   ├── add_fear_greed.py              # Fear & Greed Index features
-│   ├── sp500_data/                    # Raw S&P 500 stock CSV files (502 stocks)
-│   ├── sp500_daily_technical_features.csv
-│   ├── sp500_daily_features_with_lags.csv
-│   ├── sp500_daily_features_with_indices.csv
-│   └── sp500_daily_features_with_fear_greed.csv  # Final dataset
-├── plots/                              # Comprehensive model comparison plots
-│   ├── avg_val_auc_comparison.png
-│   ├── accuracies_over_folds.png
-│   ├── aucs_over_folds.png
-│   ├── precisions_over_folds.png
-│   ├── recalls_over_folds.png
-│   ├── f1_scores_over_folds.png
-│   ├── roc_curves_all_folds.png
-│   ├── precision_recall_curves.png
-│   ├── confusion_matrices.png
-│   └── metric_comparison_bars.png
-├── saved_models/                       # Trained model artifacts
-│   ├── fold_1/ to fold_5/             # Models from each validation fold
-│   ├── fold_final/                   # Final models trained on all data
-│   └── model_summary.txt             # Performance summary
-├── sequential_splits_v1/              # Time-ordered data splits
-│   ├── fold_X_train.csv              # Training data for each fold
-│   ├── fold_X_validation.csv         # Validation data for each fold
-│   ├── final_test.csv                # Final test set
-│   └── splits_summary.csv            # Split information summary
-├── sequential_validation.py           # Data splitting script
-├── train_models.py                   # Model training script
-├── create_comprehensive_plots.py     # Comprehensive plotting script
-├── test_models.py                    # Model testing script (optional)
-└── README.md                         # This file
-```
-
 ## Quick Start
 
 ### Prerequisites
@@ -94,20 +52,6 @@ cd dataset_creation
 # 1. Download S&P 500 stock data
 python download_sp500_data.py
 
-# 2. Create technical features
-python create_technical_features.py
-
-# 3. Add lag features
-python add_lag_features.py
-
-# 4. Add international indices
-python add_international_indices.py
-
-# 5. Add Fear & Greed Index
-python add_fear_greed.py
-
-cd ..
-```
 
 **Final dataset**: `dataset_creation/sp500_daily_features_with_fear_greed.csv`
 
@@ -127,13 +71,6 @@ python train_models.py
 
 This trains 3 models (Logistic Regression, Random Forest, XGBoost) on 5 folds and saves them to `saved_models/`
 
-#### Step 4: Generate Comprehensive Plots
-
-```bash
-python create_comprehensive_plots.py
-```
-
-This creates all comparison plots in the `plots/` directory.
 
 ## Detailed Component Description
 
@@ -144,42 +81,6 @@ This creates all comparison plots in the `plots/` directory.
 - **Method**: Fetches list of S&P 500 tickers from GitHub, downloads historical data
 - **Output**: Individual CSV files in `sp500_data/` directory (502 stocks)
 - **Date Range**: 2018-01-01 to present
-
-#### `create_technical_features.py`
-- **Purpose**: Calculates technical indicators for each stock
-- **Features**: 
-  - Price ratios (High/Low, Close/Open, etc.)
-  - Moving averages (5-day, 20-day, 50-day)
-  - Volume indicators
-  - Volatility measures
-  - Momentum indicators (RSI, MACD)
-  - Bollinger Bands
-  - Autocorrelation features
-- **Input**: Raw stock CSV files from `sp500_data/`
-- **Output**: `sp500_daily_technical_features.csv` (49 technical features)
-
-#### `add_lag_features.py`
-- **Purpose**: Adds lag features (returns from past N days)
-- **Features**: 
-  - Lag returns (1, 2, 3, 4, 5, 10, 15, 20, 22 days)
-  - Lag return statistics (mean, std over 5 and 22 day windows)
-  - Lag of technical indicators (price ratios, volume, volatility)
-- **Input**: Technical features dataset
-- **Output**: `sp500_daily_features_with_lags.csv` (70 total features)
-
-#### `add_international_indices.py`
-- **Purpose**: Incorporates international market indices as features
-- **Indices**: 
-  - Nikkei 225 (Japan)
-  - Hang Seng (Hong Kong)
-  - All Ordinaries (Australia)
-  - DAX (Germany)
-  - FTSE 100 (UK)
-  - NYSE Composite (US)
-  - DJIA (US)
-- **Features**: Returns, moving averages (5-day, 20-day), volatility, price-to-MA ratios
-- **Input**: Dataset with lag features
-- **Output**: `sp500_daily_features_with_indices.csv` (112 total features)
 
 #### `add_fear_greed.py`
 - **Purpose**: Adds Fear & Greed Index features
@@ -192,6 +93,7 @@ This creates all comparison plots in the `plots/` directory.
     - `fg_class_Neutral`
     - `fg_class_Greed`
     - `fg_class_Extreme_Greed`
+      
 - **Data Handling**:
   - Forward-fills weekend/holiday values to next trading day
   - Shifts by 1 day to avoid look-ahead bias
@@ -235,19 +137,7 @@ RandomForestClassifier(n_estimators=100, random_state=42, class_weight='balanced
 XGBClassifier(n_estimators=100, random_state=42, scale_pos_weight=1, n_jobs=-1, eval_metric='logloss')
 ```
 
-### 4. Comprehensive Plotting (`create_comprehensive_plots.py`)
-
-- **Purpose**: Creates comprehensive comparison plots for all models
-- **Plots Generated**:
-  1. **Average Validation AUC Comparison**: Bar chart comparing average AUC
-  2. **Metrics Over Folds**: Line plots for Accuracy, AUC, Precision, Recall, F1-Score
-  3. **ROC Curves**: Individual fold ROC curves + average ROC curve
-  4. **Precision-Recall Curves**: Average PR curves across all folds
-  5. **Confusion Matrices**: Aggregated confusion matrices for all models
-  6. **Metric Comparison Bars**: Bar charts comparing all key metrics
-- **Output**: All plots saved in `plots/` directory
-
-### 5. Model Testing (`test_models.py` - Optional)
+### 4. Model Testing (`test_models.py` - Optional)
 
 - **Purpose**: Loads trained models and evaluates them on test set
 - **Evaluation**: All models across all folds + final models
