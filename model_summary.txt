@@ -1,0 +1,100 @@
+Stock Movement Prediction - Model Summary
+==================================================
+
+Fold fold_1:
+  Gradient Boosted Trees:
+    Accuracy: 0.4925
+    Precision: 0.5612
+    Recall: 0.1991
+    F1-Score: 0.2939
+    AUC: 0.5190
+
+  Logistic Regression:
+    Accuracy: 0.4756
+    Precision: 0.5105
+    Recall: 0.2790
+    F1-Score: 0.3608
+    AUC: 0.4892
+
+  Random Forest:
+    Accuracy: 0.5062
+    Precision: 0.5587
+    Recall: 0.3292
+    F1-Score: 0.4143
+    AUC: 0.5161
+
+Fold fold_2:
+  Gradient Boosted Trees:
+    Accuracy: 0.4756
+    Precision: 0.5085
+    Recall: 0.2227
+    F1-Score: 0.3098
+    AUC: 0.4951
+
+  Logistic Regression:
+    Accuracy: 0.4776
+    Precision: 0.5313
+    Recall: 0.0964
+    F1-Score: 0.1631
+    AUC: 0.5126
+
+  Random Forest:
+    Accuracy: 0.4798
+    Precision: 0.5260
+    Recall: 0.1567
+    F1-Score: 0.2415
+    AUC: 0.5011
+
+Fold fold_3:
+  Gradient Boosted Trees:
+    Accuracy: 0.5107
+    Precision: 0.5173
+    Recall: 0.4202
+    F1-Score: 0.4637
+    AUC: 0.5161
+
+  Logistic Regression:
+    Accuracy: 0.5370
+    Precision: 0.5343
+    Recall: 0.6268
+    F1-Score: 0.5769
+    AUC: 0.5353
+
+  Random Forest:
+    Accuracy: 0.5139
+    Precision: 0.5118
+    Recall: 0.7444
+    F1-Score: 0.6066
+    AUC: 0.5193
+
+Fold fold_4:
+  Gradient Boosted Trees:
+    Accuracy: 0.4970
+    Precision: 0.5208
+    Recall: 0.4361
+    F1-Score: 0.4747
+    AUC: 0.4969
+
+  Logistic Regression:
+    Accuracy: 0.5045
+    Precision: 0.5304
+    Recall: 0.4292
+    F1-Score: 0.4745
+    AUC: 0.5090
+
+  Random Forest:
+    Accuracy: 0.4907
+    Precision: 0.5264
+    Recall: 0.2267
+    F1-Score: 0.3170
+    AUC: 0.4969
+
+Fold fold_5:
+  Logistic Regression:
+    Accuracy: 0.5141
+    Precision: 0.5368
+    Recall: 0.4856
+    F1-Score: 0.5099
+    AUC: 0.5272
+
+Final Models:
